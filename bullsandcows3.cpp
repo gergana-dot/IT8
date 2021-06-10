@@ -14,9 +14,18 @@ int main() {
 	int rmdigit3 = rightnum /10 % 10;
 	int rmdigit4 = rightnum % 10;
 
+    while (rmdigit1==rmdigit2 || rmdigit1==rmdigit3 || rmdigit1==rmdigit4 || rmdigit2==rmdigit3 || rmdigit2==rmdigit4 || rmdigit4==rmdigit3)
+    {
+         rightnum = rand() % 9000 + 1000;
+         rmdigit1 = rightnum / 1000;
+	     rmdigit2 = rightnum / 100 % 10;
+	     rmdigit3 = rightnum /10 % 10;
+	     rmdigit4 = rightnum % 10;
+    }
+
 	do
     {
-    cout << "Enter your number (four digits): ";
+    cout << "Enter your number (four different digits): ";
 	cin >> guess;
 
 	int guessdigit1 = guess / 1000;
